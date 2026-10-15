@@ -1,0 +1,11 @@
+<Project Sdk="Devsense.Php.Sdk">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>babde14b-22f2-f084-9d3b-2dfd49cb4411</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnvName>PHPDev</EnvName>
+    <RuntimeVersion>8.4</RuntimeVersion>
+    <WebRoot>public</WebRoot>
+    <PHPDevRouting>vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php</PHPDevRouting>
+  </PropertyGroup>
+</Project>
