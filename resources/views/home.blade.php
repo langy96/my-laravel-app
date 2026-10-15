@@ -5,6 +5,14 @@
     <title>Document</title>
 </head>
 <body>
+
+    @auth
+    <p>Login successful</p>
+    <form action="/logout" method="POST">
+        @csrf
+        <button>Log out</button>
+    </form>
+    @else
     <div style="border: 3px solid black;">
         <h2>Register</h2>
         <form action="/register" method="POST">
@@ -15,5 +23,7 @@
             <button>Register</button>
         </form>
     </div>
+    @endauth
+
 </body>
 </html>
