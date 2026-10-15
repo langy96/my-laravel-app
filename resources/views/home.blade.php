@@ -18,9 +18,20 @@
             @csrf
             <input name="title" type="text" placeholder="post title">
             <textarea name="body" placeholder="post body"></textarea>
-            <button>Create post</button>
+            <button>Post</button>
         </form>
     </div>
+
+    <div style="border: 3px solid black;">
+        <h2>All posts</h2>
+        @foreach($posts as $post)
+        <div style="background-color: lightgray; padding: 12px; margin 12px;">
+            <h3>{{$post['title']}}</h3>
+            {{$post['body']}}
+        </div>
+        @endforeach
+    </div>
+
     @else
     <div style="border: 3px solid black;">
         <h2>Register</h2>
@@ -32,6 +43,7 @@
             <button>Register</button>
         </form>
     </div>
+
     <div style="border: 3px solid black;">
         <h2>Login</h2>
         <form action="/login" method="POST">
