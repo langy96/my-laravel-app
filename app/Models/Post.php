@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 #[Fillable(['title', 'body', 'user_id'])]
 class Post extends Model
 {
-    //
+    public function user() {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
